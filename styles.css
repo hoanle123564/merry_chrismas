@@ -147,20 +147,20 @@ body {
 .tree-lights li:nth-child(21) { transform: rotate(30deg) }
 
 /* Màu sắc đèn LED - BÓNG ĐÈN RƠI XUỐNG NHƯ THÁC */
-.tree-lights li:nth-child(5n+1)::before { background: #ff6b6b; color: #ff6b6b; animation: ledFall1 2s linear infinite; }
-.tree-lights li:nth-child(5n+1)::after { background: #4ecdc4; color: #4ecdc4; animation: ledFall2 2s linear infinite; }
+.tree-lights li:nth-child(5n+1)::before { background: #ff6b6b; color: #ff6b6b; animation: ledFall1 3s linear infinite; }
+.tree-lights li:nth-child(5n+1)::after { background: #4ecdc4; color: #4ecdc4; animation: ledFall2 3s linear infinite; }
 
-.tree-lights li:nth-child(5n+2)::before { background: #ffe66d; color: #ffe66d; animation: ledFall1 2.2s linear infinite; }
-.tree-lights li:nth-child(5n+2)::after { background: #a8e6cf; color: #a8e6cf; animation: ledFall2 2.2s linear infinite; }
+.tree-lights li:nth-child(5n+2)::before { background: #ffe66d; color: #ffe66d; animation: ledFall1 3.3s linear infinite; }
+.tree-lights li:nth-child(5n+2)::after { background: #a8e6cf; color: #a8e6cf; animation: ledFall2 3.3s linear infinite; }
 
-.tree-lights li:nth-child(5n+3)::before { background: #ff8b94; color: #ff8b94; animation: ledFall1 1.8s linear infinite; }
-.tree-lights li:nth-child(5n+3)::after { background: #ff6b6b; color: #ff6b6b; animation: ledFall2 1.8s linear infinite; }
+.tree-lights li:nth-child(5n+3)::before { background: #ff8b94; color: #ff8b94; animation: ledFall1 2.7s linear infinite; }
+.tree-lights li:nth-child(5n+3)::after { background: #ff6b6b; color: #ff6b6b; animation: ledFall2 2.7s linear infinite; }
 
-.tree-lights li:nth-child(5n+4)::before { background: #4ecdc4; color: #4ecdc4; animation: ledFall1 2.4s linear infinite; }
-.tree-lights li:nth-child(5n+4)::after { background: #ffe66d; color: #ffe66d; animation: ledFall2 2.4s linear infinite; }
+.tree-lights li:nth-child(5n+4)::before { background: #4ecdc4; color: #4ecdc4; animation: ledFall1 3.6s linear infinite; }
+.tree-lights li:nth-child(5n+4)::after { background: #ffe66d; color: #ffe66d; animation: ledFall2 3.6s linear infinite; }
 
-.tree-lights li:nth-child(5n)::before { background: #a8e6cf; color: #a8e6cf; animation: ledFall1 2.1s linear infinite; }
-.tree-lights li:nth-child(5n)::after { background: #ff8b94; color: #ff8b94; animation: ledFall2 2.1s linear infinite; }
+.tree-lights li:nth-child(5n)::before { background: #a8e6cf; color: #a8e6cf; animation: ledFall1 3.2s linear infinite; }
+.tree-lights li:nth-child(5n)::after { background: #ff8b94; color: #ff8b94; animation: ledFall2 3.2s linear infinite; }
 
 /* Hiệu ứng bóng đèn rơi xuống dạng thác */
 @keyframes ledFall1 {
