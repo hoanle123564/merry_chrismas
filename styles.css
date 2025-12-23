@@ -23,12 +23,20 @@ body {
     overflow: hidden;
     flex-direction: column;
     position: relative;
+    min-height: -webkit-fill-available;
 }
 
 @media (max-width: 768px) {
-    html, body {
+    html {
+        height: -webkit-fill-available;
+    }
+    
+    body {
         overflow: hidden;
-        height: 100%;
+        height: 100vh;
+        height: -webkit-fill-available;
+        background-attachment: scroll;
+        touch-action: pan-x pan-y;
     }
 }
 
@@ -48,6 +56,21 @@ body {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     transition: opacity 1s, visibility 1s;
     display: block;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .christmas-message {
+        font-size: 40px;
+        top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .christmas-message {
+        font-size: 32px;
+        top: 5px;
+    }
 }
 
 @keyframes glow {
@@ -68,6 +91,12 @@ body {
     margin-top: 0;
 }
 
+@media (max-width: 768px) {
+    .tree-container, .t-container {
+        height: 70vh;
+    }
+}
+
 /* Ngôi sao hồng 5 cánh */
 .star-pink {
     position: absolute;
@@ -80,6 +109,14 @@ body {
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     z-index: 25;
     box-shadow: 0 0 20px #ff9999;
+}
+
+@media (max-width: 768px) {
+    .star-pink {
+        width: 25px;
+        height: 25px;
+        top: 8vh;
+    }
 }
 
 /* Cây thông với dây đèn rơi xuống */
@@ -95,6 +132,13 @@ body {
     height: 60vh;
     z-index: 10;
     perspective: 1000px;
+}
+
+@media (max-width: 768px) {
+    .tree-lights {
+        height: 50vh;
+        top: 8vh;
+    }
 }
 
 /* Mỗi sợi dây LED rơi xuống - DÂY ĐỨNG YÊN */
@@ -216,6 +260,20 @@ body {
     z-index: 10;
 }
 
+@media (max-width: 768px) {
+    .cat-image {
+        width: 150px;
+        bottom: 18vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .cat-image {
+        width: 120px;
+        bottom: 20vh;
+    }
+}
+
 .tree-icon {
     width: 120px;
     height: auto;
@@ -245,6 +303,12 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        bottom: 20px;
+    }
 }
 
 #showButton {
@@ -472,6 +536,16 @@ h4 {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .badge {
+        font-size: 12px;
+        padding: 6px 15px;
+        bottom: 15px;
+        letter-spacing: 0.5px;
+    }
 }
 
 .guide {
@@ -485,6 +559,19 @@ h4 {
     transform: translateX(-50%);
     width: 100%;
     text-align: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+    .guide {
+        font-size: 9px;
+        bottom: 50px;
+        width: 95%;
+    }
 }
 
 #camera-preview {
@@ -499,6 +586,15 @@ h4 {
     border-radius: 8px;
     z-index: 200;
     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    #camera-preview {
+        width: 80px;
+        height: 60px;
+        top: 10px;
+        right: 10px;
+    }
 }
 
 #error-log {

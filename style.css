@@ -2,6 +2,13 @@ body {
     margin: 0;
     overflow: hidden;
     font-family: 'Segoe UI', sans-serif;
+    min-height: -webkit-fill-available;
+}
+
+@media (max-width: 768px) {
+    body {
+        touch-action: pan-x pan-y;
+    }
 }
 
 #canvas-container {
@@ -12,6 +19,12 @@ body {
     height: 100vh;
     display: block;
     z-index: 1;
+}
+
+@media (max-width: 768px) {
+    #canvas-container {
+        height: -webkit-fill-available;
+    }
 }
 
 #ui-layer {
@@ -41,6 +54,25 @@ body {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .badge {
+        font-size: 12px;
+        padding: 6px 15px;
+        bottom: 15px;
+        letter-spacing: 0.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .badge {
+        font-size: 10px;
+        padding: 5px 12px;
+        bottom: 10px;
+        letter-spacing: 0px;
+    }
 }
 
 .guide {
@@ -54,6 +86,26 @@ body {
     transform: translateX(-50%);
     width: 100%;
     text-align: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+    .guide {
+        font-size: 9px;
+        bottom: 50px;
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .guide {
+        font-size: 8px;
+        bottom: 45px;
+    }
 }
 
 button {
@@ -68,6 +120,20 @@ button {
     font-size: 16px;
     box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
     animation: pulse 1.5s infinite;
+}
+
+@media (max-width: 768px) {
+    button {
+        padding: 12px 40px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        padding: 10px 30px;
+        font-size: 12px;
+    }
 }
 
 @keyframes pulse {
@@ -96,6 +162,24 @@ button {
     border-radius: 8px;
     z-index: 200;
     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    #camera-preview {
+        width: 80px;
+        height: 60px;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #camera-preview {
+        width: 60px;
+        height: 45px;
+        top: 5px;
+        right: 5px;
+    }
 }
 
 #error-log {
