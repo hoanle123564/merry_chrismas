@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERRY CHRISTMAS</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="error-log"></div>
+    <div id="canvas-container" style="display: none;"></div>
+    <video class="input_video" style="display:none"></video>
+    <canvas id="camera-preview" style="display: none;"></canvas>
+    <div id="status" class="badge" style="display: none;">🎄 Giang Sinh An Lanh 🎄</div>
+    <div class="guide" style="display: none;">
+        🖐 <b>Xòe:</b> Bung Quà & Đèn &nbsp;|&nbsp; 👌 <b>Pinch:</b> Xem ảnh &nbsp;|&nbsp; ✊ <b>Nắm:</b> Thu cây
+    </div>
+
+    <div id="as" class="christmas-message">Merry Christmas</div>
+
+    <div class="t-container">
+        <!-- Ngôi sao hồng đỉnh cây -->
+        <div class="star-pink"></div>
+
+        <!-- Cây thông với dây đèn rơi xuống -->
+        <ul class="tree-lights">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+        </ul>
+
+        <!-- Con mèo GIF ở giữa cây -->
+        <img src="./mewmew.gif" alt="Mèo" class="cat-image">
+    </div>
+
+    <div class="container">
+        <button id="showButton">
+            <img src="./love-letter.png" alt="Open Letter" class="letter-icon">
+        </button>
+    </div>
+
+    <div id="guideInfo" class="hidden">
+        <button id="closeButton" class="close-btn">X</button>
+        <div id="ax" class="card">
+            <div class="imgBox">
+                <div class="bark"></div>
+                <img src="./mery.png">
+            </div>
+
+            <div class="details">
+                <h4 class="color2 margin">(MERRY CHRISTMAS)</h4>
+                <p>Giáng Sinh đến rồi.</p>
+                <p>Chúc bạn mùa lễ ấm áp và ngọt</p>
+                <p>ngào như tình bạn của chúng ta.</p>
+                <p>Cảm ơn bạn luôn bên cạnh tôi.</p>
+                <p>Hy vọng chúng ta sẽ có thêm nhiều</p>
+                <p>kỷ niệm đẹp trong năm tới.</p>
+                <p class="text-right">Chúc mừng Giáng Sinh!</p>
+                <p class="text-right">♥Panbap♥</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
